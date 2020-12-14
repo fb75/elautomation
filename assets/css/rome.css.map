@@ -1,0 +1,12 @@
+{
+	"version": 3,
+	"file": "rome.css",
+	"sources": [
+		"../../scss/rome.scss"
+	],
+	"sourcesContent": [
+		""
+	],
+	"names": [],
+	"mappings": ""
+}

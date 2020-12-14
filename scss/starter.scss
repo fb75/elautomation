@@ -9,7 +9,6 @@
 // `$body-color` or write more CSS that override's Bootstrap's CSS like so:
 // `body { color: red; }`.
 
-
 //
 // Override Bootstrap here
 //
@@ -19,10 +18,9 @@ $enable-gradients: true;
 $enable-shadows: true;
 
 // Customize some defaults
-$body-color: purple;
-$body-bg: #f5f5f5;
-$border-radius: .4rem;
-
+// $body-color: purple;
+// $body-bg: #f5f5f5;
+// $border-radius: 0.4rem;
 
 //
 // Bring in Bootstrap
@@ -41,22 +39,22 @@ $border-radius: .4rem;
 @import "bootstrap/scss/functions"; // Required
 @import "bootstrap/scss/variables"; // Required
 @import "bootstrap/scss/mixins"; // Required
-// @import "bootstrap/scss/root";
+@import "bootstrap/scss/root";
 @import "bootstrap/scss/reboot"; // Required
 @import "bootstrap/scss/type";
 // @import "bootstrap/scss/images";
-// @import "bootstrap/scss/code";
+@import "bootstrap/scss/code";
 @import "bootstrap/scss/grid";
 // @import "bootstrap/scss/tables";
 // @import "bootstrap/scss/forms";
 @import "bootstrap/scss/buttons";
 @import "bootstrap/scss/transitions";
-// @import "bootstrap/scss/dropdown";
-// @import "bootstrap/scss/button-group";
-// @import "bootstrap/scss/input-group"; // Requires forms
-// @import "bootstrap/scss/custom-forms";
-// @import "bootstrap/scss/nav";
-// @import "bootstrap/scss/navbar"; // Requires nav
+@import "bootstrap/scss/dropdown";
+@import "bootstrap/scss/button-group";
+@import "bootstrap/scss/input-group"; // Requires forms
+@import "bootstrap/scss/custom-forms";
+@import "bootstrap/scss/nav";
+@import "bootstrap/scss/navbar"; // Requires nav
 // @import "bootstrap/scss/card";
 // @import "bootstrap/scss/breadcrumb";
 // @import "bootstrap/scss/pagination";
@@ -75,18 +73,949 @@ $border-radius: .4rem;
 // @import "bootstrap/scss/spinners";
 @import "bootstrap/scss/utilities";
 // @import "bootstrap/scss/print";
+@import url("https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400&display=swap");
 
-
+@import "variables";
 
 //
 // Custom styles
 //
 
-body {
-  padding: 3rem;
+@font-face {
+  font-family: "Teuton";
+  src: url("../fonts/Teuton/teutonnormal-webfont.woff2") format("woff2"),
+    url("../fonts/Teuton/teutonnormal-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
 }
 
-// Style Bootstrap icons
-.bi {
-  fill: currentColor;
+body,
+html {
+  overflow-x: hidden;
+  margin: 0;
+  padding: 0;
 }
+/* HP1, HP2, HP3 PAGES START */
+
+.link-navbar {
+  font-family: "Teuton";
+  font-size: 16px;
+  line-height: 50px;
+  color: $cranberry;
+}
+
+.main-area-title {
+  font-family: "Teuton";
+  font-size: 60px;
+  line-height: 60px;
+  color: $white-three;
+}
+
+@media screen and (min-width: 990px) {
+  .main-area-title {
+    margin: 4.5em .5em 0em;
+  }
+}
+@media screen and (min-width: 768px) and (max-width: 990px) {
+  .main-area-title {
+    margin: 1.5em .5em 1em;
+    padding: 1em 0 1.5em;
+  }
+}
+@media screen and (max-width: 768px) {
+  .main-area-title {
+    margin: 1em .5em 1em;
+    padding: 1em 0 1em;
+  }
+}
+
+.main-area-statement {
+  background: $black-50 url("/static/media/imgs/main_bg.jpg") no-repeat center;
+  background-size: cover;
+  height: 740px;
+}
+.scroll-down-img {
+  cursor: pointer;
+  z-index: 100;
+}
+.secondary-content {
+  background-color: $bordeaux;
+  // height: 511px;
+  h3 {
+    color: $white-three;
+    font-family: "Teuton";
+    font-size: 45px;
+    line-height: 1.1;
+  }
+  .el-auto-p {
+    color: $white-three;
+    font-family: "Quicksand";
+    font-size: 16px;
+    line-height: 1.63;
+  }
+
+}
+@media screen and (max-width: 576px) {
+  .secondary-content {
+    padding: 1.5em;
+  }
+  .scroll-down-img {
+    margin-bottom: 4em;
+  }
+}
+.secondary-area {
+  padding-left: 0;
+  padding-right: 0;
+  .robot-image {
+    display: none;
+  }
+}
+@media screen and (max-width: 768px) {
+  .secondary-content {
+    height: fit-content;
+  }
+}
+.secondary-area {
+  padding-left: 0;
+  padding-right: 0;
+  .robot-image {
+    display: none;
+  }
+}
+
+
+@media screen and(min-width: 768px) {
+  .secondary-area {
+    .robot-image {
+      display: block;
+      z-index: 100;
+    }
+  }
+  .secondary-area + div {
+    padding-right: 4em !important;
+    position: relative;
+    right: 3em;
+  }
+}
+@media screen and (min-width: 768px) and (max-width: 1280px) {
+  .secondary-area + div {
+    right: 0;
+  }
+}
+@media screen and (min-width: 990px) {
+  .secondary-area  {
+    padding: 4em 0;
+  }
+}
+@media screen and (max-width: 768px) {
+  .main-left-img {
+    display: none;
+  }
+}
+@media screen and (min-width: 768px) and (max-width: 990px) {
+  .main-left-img {
+    display: none;
+  }
+}
+@media screen and(min-width: 768px) {
+  .main-left-img {
+    height: 755px;
+    width: 789px;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+  }
+}
+
+.stats-area {
+  background-color: $cranberry;
+  font-family: "Teuton";
+  color: $white-three;
+
+  .value {
+    font-size: 45px;
+    span {
+      vertical-align: middle;
+    }
+  }
+  .value-description {
+    font-size: 18px;
+    line-height: 18px;
+  }
+}
+@media screen and (max-width: 768px) {
+  .stats-img {
+    margin-bottom: 1em;
+  }
+}
+
+.management {
+  background: $white-four url("/static/media/imgs/home_bg_2.svg") no-repeat
+    center center;
+  background-size: cover;
+
+  .management-title {
+    font-family: "Teuton";
+    font-size: 100px;
+    color: $warm-grey;
+  }
+  p {
+    font-family: "Quicksand";
+    line-height: 26px;
+    color: $dark;
+  }
+  span {
+    font-family: Teuton;
+    font-size: 20px;
+    line-height: 1.3;
+  }
+  span:first-of-type {
+    color: $cranberry;
+  }
+  span:last-of-type {
+    color: $dark;
+  }
+}
+
+.outlook {
+  .outlook-title {
+    font-family: "Teuton";
+    font-size: 100px;
+    color: $warm-grey;
+  }
+
+  h4.outlook-item {
+    font-family: Teuton;
+    font-size: 35px;
+    color: $dark;
+    border-bottom: 3px solid $dark;
+    cursor: pointer;
+    transition: all 0.3s;
+    &:hover,
+    &:active {
+      background: $cranberry;
+      color: $white-three;
+      border-radius: 3px;
+      border-bottom: 0px;
+    }
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .employer-manager,
+  .double-quote {
+    display: none;
+  }
+
+  .management-title,
+  .outlook-title {
+    font-size: 40px !important;
+    text-align: center !important;
+    margin-top: 0.5em !important;
+  }
+
+  h4.outlook-item {
+    border-bottom: none !important;
+    font-size: 20px !important;
+    transition: none !important;
+  }
+  h4.outlook-item:hover {
+    color: $dark !important;
+    background: none !important;
+  }
+}
+
+.outlook-rectangles-area {
+  .rectangle {
+    width: 50px;
+    height: 15px;
+    background: $white-four;
+    cursor: pointer;
+    transition: background 0.3s;
+    &.active {
+      background: $cranberry;
+    }
+    &:hover {
+      background: $cranberry;
+    }
+  }
+}
+.outlook-list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  .outlook-list-item {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+
+    .outlook-list-decorator {
+      width: 20px;
+      height: 4px;
+      background: #da222a;
+    }
+  }
+}
+@media screen and (max-width: 768px) {
+  .outlook-list {
+    .outlook-list-item {
+      margin: 0.5em 0;
+
+      .outlook-list-decorator {
+        width: 3px;
+        height: 3px;
+        border-radius: 50px;
+        margin-right: 14px;
+        background: #da222a;
+      }
+    }
+  }
+}
+
+
+
+.energy-section {
+  box-shadow: 2px 2px 14px 12px rgba(0, 0, 0, 0.05);
+}
+@media screen and (max-width: 768px) {
+  .energy-section {
+    width: 95%;
+    margin: auto;
+
+    .robot2 {
+      display: none;
+    }
+  }
+}
+@media screen and (min-width: 768px) and (max-width: 1000px) {
+  .energy-section {
+    width: 95%;
+    margin: auto;
+  }
+  .robot2 {
+    display: none;
+  }
+}
+@media screen and (min-width: 1001px) {
+  .energy-section {
+    width: 85%;
+    margin: auto;
+  }
+  .robot2 {
+    margin: auto;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+}
+
+h3.energy-title {
+  font-family: "Teuton";
+  font-size: 35px;
+  color: #da222a;
+}
+.energy-p {
+  font-family: Teuton;
+  font-size: 20px;
+  color: $dark;
+  line-height: 1.3;
+  margin-bottom: 0;
+}
+
+.outlook-list {
+  li {
+    font-family: "Quicksand";
+    font-size: 16px;
+    line-height: 1.63;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .outlook-list {
+    li {
+      .environment-span {
+        width: 80%;
+      }
+    }
+  }
+}
+.environment-list-container {
+  margin-bottom: 4em;
+}
+@media screen and (min-width: 768px) {
+  .environment-list-container {
+    margin-bottom: 7em;
+  }
+}
+.maps {
+  h3 {
+    font-family: "Teuton";
+    color: $warm-grey;
+  }
+  p {
+    font-family: "Quicksand";
+    font-size: 16px;
+    color: $dark;
+    line-height: 1.63;
+  }
+  svg {
+    padding: 1em;
+  }
+  .map-legenda {
+    list-style: none;
+    // margin: 0;
+    padding: 0;
+    li {
+      font-family: "Teuton";
+      font-size: 15px;
+      line-height: 1.33;
+      span {
+        color: $warm-grey;
+      }
+      .circle-grey {
+        width: 13px;
+        height: 13px;
+        border-radius: 50%;
+        background: $warm-grey;
+      }
+      .circle-dark {
+        width: 13px;
+        height: 13px;
+        border-radius: 50%;
+        background: $charcoal-grey;
+      }
+      .circle-cranberry {
+        width: 13px;
+        height: 13px;
+        border-radius: 50%;
+        background: $cranberry;
+      }
+    }
+  }
+}
+
+.maps {
+  background: $white-two;
+}
+
+
+
+@media screen and (min-width: 768px) {
+  .maps h3 {
+    font-size: 100px;
+  }
+}
+@media screen and (max-width: 768px) {
+  .maps h3 {
+    font-size: 35px;
+    text-align: center;
+    margin: 0.5em 0;
+  }
+}
+
+.energy-stats {
+  background: $white-three;
+  &.no-bg {
+    background: transparent!important;
+  }
+}
+
+.banner-span-high {
+  font-family: "Teuton";
+  font-size: 60px;
+  color: $cranberry;
+}
+.banner-span-low {
+  font-family: "Teuton";
+  font-size: 40px;
+  color: $cranberry;
+}
+.banner-span-descr {
+  font-family: "Teuton";
+  font-size: 18px;
+  color: $cranberry;
+}
+
+.stats-control {
+  width: 50px;
+  height: 15px;
+  background: $white-four;
+}
+
+.regulations {
+  background: $dark;
+  color: $white-three;
+
+  .regulations-title {
+    font-family: "Teuton";
+    font-size: 35px;
+    color: $white-three;
+  }
+  p {
+    font-family: "Quicksand";
+    font-size: 16px;
+    line-height: 26px;
+  }
+  a {
+    font-family: "Teuton";
+    font-size: 20px;
+    text-decoration: none;
+    color: $white-three;
+    img {
+      margin-left: 0.5em;
+    }
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .regulations-img {
+    display: none;
+  }
+}
+@media screen and (min-width: 768px) {
+  .regulations {
+    padding: 0 4.5em;
+    p {
+      width: 70%;
+      margin-bottom: .5em;
+    }
+    a {
+      img {
+        margin-left: 1em;
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 768px) and (max-width: 990px) {
+  .regulations {
+    padding: 2em 6em;
+    p {
+      width: 100%;
+    }
+    a {
+      img {
+        margin-left: 1em;
+      }
+    }
+  }
+  .regulations-img {
+    display: none;
+  }
+}
+
+.locations {
+  h3 {
+    font-family: "Teuton";
+    color: $white-three;
+  }
+  background: linear-gradient(to bottom, $bordeaux, $cranberry);
+  width: 100vw !important;
+  padding: 0 !important;
+  margin: 0 !important;
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-around;
+  .card-info {
+    span {
+      font-family: "Teuton";
+      font-size: 20px;
+      color: $white-three;
+    }
+    a {
+      font-family: 'Teuton';
+      text-decoration: none;
+      color: $white-three;
+      img {
+        margin-left: .2em;
+      }
+    }
+  }
+  .card-location {
+    width: 390px !important;
+    height: 276px !important;
+
+    &.loc-1 {
+      background-image: linear-gradient(to left, $cranberry, $bordeaux-0),
+        url("/static/media/imgs/card1.jpg");
+    }
+    &.loc-2 {
+      background-image: linear-gradient(to left, $cranberry, $bordeaux-0),
+        url("/static/media/imgs/card2.jpg");
+    }
+    &.loc-3 {
+      background-image: linear-gradient(to left, $cranberry, $bordeaux-0),
+        url("/static/media/imgs/card3.jpg");
+    }
+    &.loc-4 {
+      background-image: linear-gradient(to left, $cranberry, $bordeaux-0),
+        url("/static/media/imgs/card4.jpg");
+    }
+    &.loc-5 {
+      background-image: linear-gradient(to left, $cranberry, $bordeaux-0),
+        url("/static/media/imgs/livornoferraris-300-dpi.jpg");
+    }
+    &.loc-6 {
+      background-image: linear-gradient(to left, $cranberry, $bordeaux-0),
+        url("/static/media/imgs/scandale-0.jpg");
+    }
+  }
+  #footer {
+    font-family: 'Teuton';
+    font-size: 15px;
+    color: $white-three;
+    padding: 1em 0;
+    margin: .5em auto;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .locations {
+    h3 {
+      font-size: 35px;
+    }
+    .card-location {
+      margin: 1em auto;
+      width: 100%;
+    }
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .locations {
+    .location-title {
+      font-size: 100px;
+    }
+    .card-location {
+
+      .card-info {
+        position: relative;
+        left: calc(100% - 5.5em);
+        
+      }
+      h3 {
+        font-size: 65px;
+        line-height: 55px;
+        &:first-child {
+          font-size: 100px;
+          line-height: 50px;
+        }
+      }
+
+    }
+  }
+}
+
+@media screen and (min-width: 768px) and (max-width: 990px) {
+  .locations {
+    .card-location {
+      margin: 0 auto!important;
+    }
+  }
+}
+
+@media screen and (min-width: 768px) and (max-width: 1279.98px) {
+  .locations {
+    .card-location {
+      .card-info {
+        left: 2.5em;
+        top: 1.5em;
+      }
+      h3 {
+        font-size: 65px;
+        &:first-child {
+          font-size: 100px;
+        }
+      }
+    }
+  }
+}
+/* HP1, HP2, HP3 PAGES END */
+
+/* ROME PAGE START */
+
+.rome-landing {
+  height: 90vh;
+  background: url('/static/media/imgs/rome-landing.jpg') no-repeat center scroll;
+  background-size: cover;
+  font-family: 'Teuton';
+  color: $white-three;
+  h1 {
+    font-size: 115px;
+  }
+  h3 {
+    font-size: 46px;
+    line-height: 26px;
+  }
+  
+}
+.rome-navbar {
+  background: $cranberry;
+  position: -webkit-sticky;
+  position: sticky;
+  top:0;
+  left:0;
+  z-index: 999;
+  .rome-li-item {
+    a {
+      color: $white-three;
+    }
+  }
+  .navbar-text-rome {
+    font-family: 'Quicksand';
+    font-size: 18px;
+    line-height: 26px;
+    color: $white-three;
+    margin-left: 2em;
+  }
+}
+@media screen and (max-width: 1280px) {
+  .navbar-text-rome {
+    display: none;
+  }
+}
+@media screen and (min-width: 768px) {
+  .rome-navbar {
+    height: 10vh;
+  }
+}
+@media screen and (min-width: 990px) {
+
+  .management-rome-row-quotes {
+    padding: 0 5em 3em 0!important;
+    margin-left: 7em;
+  }
+  .rome-management {
+
+    .management-top-container {
+      margin-bottom: 5em;
+    }
+    .management-bottom-container {
+      display: flex;
+      flex-flow: column;
+      justify-content: flex-end;
+      p {
+        margin: 0;
+      }
+      &.mbc-1 {
+        margin-top: 2em;
+      }
+      &.mbc-2 {
+        margin-top: 0;
+      }
+      &.mbc-3 {
+        padding-top: 2.2em;
+      }
+    }
+
+
+  }
+}
+@media screen and (min-width: 1280px) {
+  .second-col-rome-quotes {
+    margin: 0 -2em;
+  }
+}
+@media screen and (min-width: 990px) and (max-width: 1280px) {
+  .medium-quote {
+    position: relative;
+    right: 1em;
+  }
+}
+.rome-management {
+  background: $white-two;
+  .medium-quote {
+    width: 50px;
+    height: 46px;
+  }
+}
+
+.power-plant {
+  background: url('/static/media/imgs/rome-landing.jpg') no-repeat center scroll;
+  background-size: cover;
+  font-family: 'Teuton';
+  color: $white-three;
+  padding-bottom: 10em;
+  .energy-stats {
+    .rome-stats-item {
+      
+      .banner-span-high {
+        font-size: 60px;
+      }
+      .banner-span-low {
+        font-family: "Teuton";
+        font-size: 40px;
+      }
+      .banner-span-descr {
+        font-size: 18px;
+        line-height: 24px;
+      }
+    }
+  }
+}
+
+.ostiglia-col {
+  background: $cranberry;
+  font-family: 'Teuton';
+  padding: 5em 5.5em;
+  z-index: 101;
+  position: relative;
+  top: -15%;
+  h3 {
+    font-size: 45px;
+    line-height: 1.11;
+  }
+  p {
+    font-family: 'Quicksand';
+    font-size: 16px;
+    margin: 3em auto;
+    color: $white-three;
+    padding: 0 10em 0 0;
+  }
+  .ostiglia-col-image-container {
+    margin-bottom: -2em;
+    padding-right: 8em;
+    .expand {
+      color: $white-three;
+      background: $bordeaux;
+      position: absolute;
+      font-size: 20px;
+      img {
+        cursor: pointer;
+      }
+    }
+  }
+}
+@media screen and (max-width: 1279.68px) {
+  .ostiglia-col {
+    justify-content: space-evenly;
+    position: static;
+    p {
+      padding: 0;
+    }
+    .ostiglia-col-image-container {
+      padding-right: 0;
+    }
+ 
+  }
+}
+
+@media screen and (min-width: 1280px) {
+
+  .plant-policy-col {
+    position: relative;
+    right: 6.5em;
+    margin: 0;
+    padding-right: 0;
+    padding-left: 0;
+  }
+}
+.plant-policy-col {
+  z-index: 104;
+  background: $white-two;
+  color: $dark;
+  .plant-policy-inner-row {
+    padding: 5em 5.5em 0;
+    p {
+      font-family: 'Quicksand';
+      font-size: 16px;
+      margin: 3em auto;
+    }
+
+    .plant-policy-subcol {
+      h3 {
+        font-family: 'Teuton';
+        font-size: 45px;  
+      }
+      h2{
+        font-size: 56px;
+        color: $cranberry;
+        line-height: 0.46;
+        font-family: 'Teuton';
+      }
+    }
+  }
+  .plant-policy-lower-inner-row {
+    .rectangle-plant {
+      width: 38px;
+      height: 71px;
+      background: $white-three;
+      cursor: pointer;
+      &:first-of-type {
+        margin-left: 1.5em;
+      }
+      &:last-of-type {
+        margin-right: 1.5em;
+      } 
+    }
+
+    .plant-policy-subcol {
+      margin: 0 2em;
+      h2{
+        font-size: 56px;
+        color: $cranberry;
+        line-height: 0.46;
+        font-family: 'Teuton';
+      }
+      p {
+        font-family: 'Quicksand';
+        font-size: 16px;
+      }
+
+    }
+  }
+}
+.pow-plant-more {
+  background: $white-three;
+  h3 {
+    font-family: 'Teuton';
+    font-size: 45px;
+    color: $dark;
+    line-height: 1.11;
+  }
+  p {
+    font-family: 'Quicksand';
+    font-size: 16px;
+    line-height: 1.63;
+  }
+  .expand {
+    color: $white-three;
+    background: $bordeaux;
+    position: absolute;
+    font-size: 20px;
+    img {
+      cursor: pointer;
+    }
+  }
+}
+
+@media screen and (min-width: 990px) {
+  .territory {
+    
+    .territory-text {
+      padding: 5em 7em;
+      h3 {
+        font-size: 100px;
+        line-height: 0.9;
+      }
+
+    }
+  }
+}
+.territory {
+  background: $white-two;
+
+  .territory-text {
+    h3 {
+      font-family: 'Teuton';
+      color: $charcoal-grey;
+    }
+    p {
+      font-family: 'Quicksand';
+      font-size: 16px;
+      line-height: 1.63;
+      color: $dark;
+    }
+  }
+}
+/* ROME PAGE END */
