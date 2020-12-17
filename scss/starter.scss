@@ -1018,4 +1018,10 @@ h3.energy-title {
     }
   }
 }
+
+@media screen and (max-width: 768px) {
+  #slider-desktop {
+    display: none;
+  }
+}
 /* ROME PAGE END */

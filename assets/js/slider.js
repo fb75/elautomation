@@ -7,7 +7,7 @@ $(function() {
     arrows: true,
     centerMode: true,
     centerPadding: 0,
-    adaptiveHeight: true
+    dots: true
   });
   console.log('hi');
   });
