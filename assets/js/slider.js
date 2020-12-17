@@ -9,5 +9,7 @@ $(function() {
     centerPadding: 0,
     dots: true
   });
-  console.log('hi');
-  });
+
+  $('.carousel').carousel();
+  
+});

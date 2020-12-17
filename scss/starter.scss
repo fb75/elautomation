@@ -69,7 +69,7 @@ $enable-shadows: true;
 @import "bootstrap/scss/modal"; // Requires transitions
 // @import "bootstrap/scss/tooltip";
 // @import "bootstrap/scss/popover";
-// @import "bootstrap/scss/carousel";
+@import "bootstrap/scss/carousel";
 // @import "bootstrap/scss/spinners";
 @import "bootstrap/scss/utilities";
 // @import "bootstrap/scss/print";
@@ -1019,8 +1019,13 @@ h3.energy-title {
   }
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 1300px) {
   #slider-desktop {
+    display: none;
+  }
+}
+@media screen and (min-width: 1299px) {
+  #myCarousel {
     display: none;
   }
 }
