@@ -736,7 +736,7 @@ h3.energy-title {
 
 .rome-landing {
   height: 90vh;
-  background: url('/static/media/imgs/rome-landing.jpg') no-repeat center scroll;
+  background: url('/static/media/imgs/rome-landing.jpg') no-repeat center fixed;
   background-size: cover;
   font-family: 'Teuton';
   color: $white-three;
@@ -884,6 +884,48 @@ h3.energy-title {
         cursor: pointer;
       }
     }
+  }
+}
+
+@media screen and (max-width: 576px) {
+  .ostiglia-col {
+    padding: 2em;
+  }
+}
+@media screen and (max-width: 576px) {
+  .plant-policy-inner-row {
+    padding: 2em!important;
+  }
+}
+@media screen and (max-width: 576px) {
+  .row-pow-plant {
+    padding: 2em;
+  }
+}
+@media screen and (max-width: 576px) {
+  .row-trt {
+    padding: 2em;
+  }
+}
+
+@media screen and (min-width: 576.98px) and (max-width: 989.98px) {
+  .ostiglia-col {
+    padding: 2.5em;
+  }
+}
+@media screen and (min-width: 576.98px) and (max-width: 989.98px) {
+  .plant-policy-inner-row {
+    padding: 2.5em!important;
+  }
+}
+@media screen and (min-width: 576.98px) and (max-width: 989.98px) {
+  .row-pow-plant {
+    padding: 2.5em;
+  }
+}
+@media screen and (min-width: 576.98px) and (max-width: 989.98px) {
+  .row-trt {
+    padding: 2.5em;
   }
 }
 @media screen and (max-width: 1279.68px) {

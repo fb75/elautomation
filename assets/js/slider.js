@@ -11,5 +11,5 @@ $(function() {
   });
 
   $('.carousel').carousel();
-  
 });
+
