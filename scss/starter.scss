@@ -1190,7 +1190,7 @@ h3.energy-title {
     }
   }
   .environmental-cards {
-    margin-top: -9.5em;
+    margin-top: -9em;
     .card-environmental {
       .card-env-descr {
         h3 {
@@ -1228,6 +1228,7 @@ h3.energy-title {
 }
 @media screen and (min-width: 990px) {
   .security {
+    padding: 2em 1.5em;
     .security-text {
       .security-title {
         font-size: 100px;
@@ -1299,8 +1300,7 @@ h3.energy-title {
   flex-flow: column;
   align-items: center;
   position: relative;
-  padding: 3.5em;
-  height: 281px;
+  padding: 4em 3.5em;
   background-image: linear-gradient(to bottom, $cranberry, $bordeaux);
   background-size: cover;
   .download-text {
@@ -1339,11 +1339,91 @@ h3.energy-title {
       cursor: pointer;
       background: $cranberry url('/static/media/icons/report.svg') no-repeat center;
       box-shadow: 2px 2px 14px 12px rgba(0, 0, 0, 0.13);
+      &:hover {
+        ~ img {
+          animation: scroll 1s infinite forwards;
+        }
+      }
     }
     img {
       cursor: pointer;
-      &:hover {
-        animation: scroll 1s infinite forwards;
+      transition: animation;
+    }
+  }
+}
+@media screen and (max-width: 576px) {
+  .rome-footer {
+    flex-flow: column;
+  }
+}
+@media screen and (min-width: 576.98px) and (max-width: 767.98px) {
+  .rome-footer {
+    .info, .footer-download {
+      padding: 2.5em;
+    }
+  }
+}
+.rome-footer {
+  .info {
+    background: $dark;
+    color: $white-three;
+    p {
+      font-family: 'Teuton';
+      font-size: 19px;
+      line-height: 1.3;
+    }
+  }
+  .person-info {
+    font-family: 'Quicksand';
+    font-size: 15px;
+    span:last-child {
+      line-height: 1.3;
+      font-weight: bold;
+    }
+  }
+  .copyright {
+    font-family: Teuton;
+    font-size: 15px;
+    line-height: 1.73;
+  }
+  .footer-download {
+    background: $charcoal-grey;
+    color: $white-three;
+    font-family: 'Teuton';
+    font-size: 19px;
+  }
+}
+@media screen and (min-width: 768px) and (max-width: 989.98px) {
+  .rome-footer {
+    .info, .footer-download {
+      padding: 3em;
+    }
+  }
+}
+@media screen and (min-width: 990px) {
+  .rome-footer {
+    .info {
+      padding: 4em 6em 4em 9.5em;
+      p {
+        margin-bottom: 1.5em;
+      }
+      .person-info {
+        margin-bottom: 3em;
+      }
+    }
+    .footer-download {
+      padding: 4em;
+      p {
+        margin-bottom: 2em;
+      }
+      span {
+        display: flex;
+        justify-content: space-between;
+        width: 90%;
+        padding-bottom: .25em;
+        border-bottom: 1px solid $dark;
+        margin-bottom: .75em;
+        cursor: pointer;
       }
     }
   }
