@@ -1294,4 +1294,59 @@ h3.energy-title {
     }
   }
 }
+.download {
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+  position: relative;
+  padding: 3.5em;
+  height: 281px;
+  background-image: linear-gradient(to bottom, $cranberry, $bordeaux);
+  background-size: cover;
+  .download-text {
+    position: absolute;
+    bottom: 0;
+    padding: 1.8em;
+    h1 {
+      font-family: 'Teuton';
+      font-size: 290px;
+      line-height: 100px;
+      color: $bordeaux;
+    }
+  }
+  .report-cont {
+    margin: auto;
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    justify-content: center;
+    color: $white-three;
+    z-index:1;
+    h4 {
+      font-family: Teuton;
+      font-size: 30px;
+      line-height: 1.4;
+    }
+    .report {
+      width: 135px;
+      height: 100px;
+      margin: auto;
+      display: flex;
+      flex-flow: column;
+      align-items: center;
+      justify-content: center;
+      margin: auto;
+      cursor: pointer;
+      background: $cranberry url('/static/media/icons/report.svg') no-repeat center;
+      box-shadow: 2px 2px 14px 12px rgba(0, 0, 0, 0.13);
+    }
+    img {
+      cursor: pointer;
+      &:hover {
+        animation: scroll 1s infinite forwards;
+      }
+    }
+  }
+}
+
 /* ROME PAGE END */
