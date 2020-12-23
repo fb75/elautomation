@@ -1432,8 +1432,7 @@ h3.energy-title {
 /* MODAL ENERGY START */
 .modal.show {
   .energy-modal {
-    max-width: 90%!important;
-    background: red!important;
+    max-width: 90%;
     .energy-modal-content {
       border-radius: 0px;
       border: none;
@@ -1469,7 +1468,7 @@ h3.energy-title {
       .modal-energy-title-col {
         .modal-energy-title {
           font-family: 'Teuton';
-          font-size: 70px;
+          font-size: 45px;
           color: $cranberry;
         }
       }
@@ -1477,7 +1476,7 @@ h3.energy-title {
         padding: 0;
         h3 {
           font-family: 'Teuton';
-          font-size: 45px;
+          font-size: 30px;
           color: $dark;
           line-height: 1.11;
         }
@@ -1485,7 +1484,7 @@ h3.energy-title {
           font-family: 'Quicksand';
           font-size: 16px;
           line-height: 1.63;
-          letter-spacing: 1.5px;
+          letter-spacing: 1.3px;
         }
       }
       .modal-energy-graph-section {
@@ -1495,19 +1494,162 @@ h3.energy-title {
           color: $bordeaux;
           line-height: 1.3;
         }
-        img {
+        .img-cont {
           width: 100%;
-          height: auto;
+          height: 350px;
+          background: url('/static/media/imgs/modal-energy-graph1.svg') no-repeat center;
+          background-size: contain;
         }
+        // img {
+        //   width: 100%;
+        //   height: auto;
+        // }
       }
       .separator {
-        width: 5px;
-        height: 145px;
-        background: $white;
+        display: none;
       }
     }
   }
 }
+
+@media screen and (min-width: 1361px) {
+  .modal.show {
+    .energy-modal {
+      .energy-modal-content {
+        .energy-modal-header {
+          span {
+          }
+          .close-energy-modal {
+          }
+        } 
+      }
+      .body-energy-modal {
+        img {
+          }
+        .modal-energy-title-col {
+          .modal-energy-title {
+            font-family: 'Teuton';
+            font-size: 70px;
+            color: $cranberry;
+          }
+        }
+        .modal-energy-text-section {
+          padding: 0;
+          h3 {
+            font-family: 'Teuton';
+            font-size: 45px;
+            color: $dark;
+            line-height: 1.11;
+          }
+          p {
+            font-family: 'Quicksand';
+            font-size: 16px;
+            line-height: 1.63;
+            letter-spacing: 1.3px;
+          }
+        }
+        .modal-energy-graph-section {
+          p {
+            
+            font-family: Teuton;
+            font-size: 20px;
+            line-height: 1.3;
+            color: #720125;
+          }
+          .img-cont {
+            width: 680px;
+            height: 462px;
+            background: url('/static/media/imgs/modal-energy-graph1.svg') no-repeat center;
+            background-size: cover;
+            position: relative;
+            left: 2em;
+          }
+          // img {
+          //   width: 100%;
+          //   height: auto;
+          // }
+        }
+        .separator {
+          display: block;
+          width: 5px;
+          height: 145px;
+          position: relative;
+          left: 7em;
+          background: $white;
+        }
+      }
+    }
+  }
+} 
+
+
+@media screen and (min-width: 990px) and (max-width: 1360px) {
+  .modal.show {
+    .energy-modal {
+      .energy-modal-content {
+        .energy-modal-header {
+          span {
+          }
+          .close-energy-modal {
+          }
+        } 
+      }
+      .body-energy-modal {
+        img {
+          }
+        .modal-energy-title-col {
+          .modal-energy-title {
+            font-family: 'Teuton';
+            font-size: 70px;
+            color: $cranberry;
+          }
+        }
+        .modal-energy-text-section {
+          padding: 0;
+          h3 {
+            font-family: 'Teuton';
+            font-size: 45px;
+            color: $dark;
+            line-height: 1.11;
+          }
+          p {
+            font-family: 'Quicksand';
+            font-size: 16px;
+            line-height: 1.63;
+            letter-spacing: 1.3px;
+          }
+        }
+        .modal-energy-graph-section {
+          p {
+            width: 300px;
+            font-family: Teuton;
+            font-size: 18px;
+            color: #720125;
+            line-height: 1.3;
+          }
+          .img-cont {
+            width: 500px;
+            height: 340px;
+            background: url('/static/media/imgs/modal-energy-graph1.svg') no-repeat center;
+            background-size: cover;
+          }
+          // img {
+          //   width: 100%;
+          //   height: auto;
+          // }
+        }
+        .separator {
+          display: block;
+          width: 5px;
+          height: 145px;
+          position: relative;
+          left: 4em;
+          background: $white;
+        }
+      }
+    }
+  }
+} 
 
 
 
