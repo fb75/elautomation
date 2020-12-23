@@ -221,8 +221,8 @@
 				<p class="mb-4">Integer a risus eget elit condimentum accumsan. Nulla facilisi. Curabitur ac ex eu neque venenatis placerat quis at lectus. Fusce vitae viverra magna, a hendrerit sem. Donec in dui ac purus pharetra euismod et ac turpis. In pretium facilisis vulputate. Mauris tincidunt varius tristique. In hac habitasse platea dictumst. Cras vehicula vulputate nibh.</p>
 				<div class="col-sm-12 col-md-12 col-lg-12 text-center my-4 py-4">
 					<div style="position: static;" class="expand py-2 px-3 d-inline-flex">
-						<span >Learn more</span>
-						<img class="ml-2" src="/static/media/icons/expand-white.svg" alt="learn">
+						<span>Learn more</span>
+						<img id="modalHandler" class="ml-2" src="/static/media/icons/expand-white.svg" alt="learn">
 					</div>
 				</div>
 			</div>
@@ -272,10 +272,10 @@
   <!-- Slider start -->
   <div class="col-lg-10 col-md-12 col-sm-12 mx-auto my-5">
     <div class="slider" id="slider-desktop">
-      <div><img style="margin: auto; width: 275px; height: 187px; box-sizing: border-box; object-fit: cover; flex: 1;" src="static/media/imgs/istockphoto-1127199612-1024x1024.jpg" alt=""></div>
-      <div><img style="margin: auto; width: 275px; height: 187px; box-sizing: border-box; object-fit: cover; flex: 1;" src="static/media/imgs/istockphoto-1173280131-1024x1024.jpg" alt=""></div>
-      <div><img style="margin: auto; width: 275px; height: 187px; box-sizing: border-box; object-fit: cover; flex: 1;" src="static/media/imgs/istockphoto-1208557898-1024x1024.jpg" alt=""></div>
-      <div><img style="margin: auto; width: 275px; height: 187px; box-sizing: border-box; object-fit: cover; flex: 1;" src="static/media/imgs/istockphoto-1208557898-1024x1024.jpg" alt=""></div>
+      <div><img style="margin: auto; width: 275px; height: 187px; box-sizing: border-box; object-fit: cover; flex: 1; background: url('/static/media/imgs/istockphoto-1127199612-1024x1024.jpg') no-repeat center; background-position: bottom;" src="static/media/imgs/istockphoto-1127199612-1024x1024.jpg" alt=""></div>
+      <div><img style="margin: auto; width: 275px; height: 187px; box-sizing: border-box; object-fit: cover; flex: 1; background: url('/static/media/imgs/istockphoto-1173280131-1024x1024.jpg') no-repeat center; background-position: bottom" src="static/media/imgs/istockphoto-1173280131-1024x1024.jpg" alt=""></div>
+      <div><img style="margin: auto; width: 275px; height: 187px; box-sizing: border-box; object-fit: cover; flex: 1; background: url('/static/media/imgs/istockphoto-1208557898-1024x1024.jpg') no-repeat center; background-position: bottom" src="static/media/imgs/istockphoto-1208557898-1024x1024.jpg" alt=""></div>
+      <div><img style="margin: auto; width: 275px; height: 187px; box-sizing: border-box; object-fit: cover; flex: 1; background: url('/static/media/imgs/istockphoto-1208557898-1024x1024.jpg') no-repeat center; background-position: bottom" src="static/media/imgs/istockphoto-1208557898-1024x1024.jpg" alt=""></div>
     </div>
   </div>
 
@@ -507,9 +507,50 @@
       <span class="reports">Sustainability Reports 2015<img src="/static/media/imgs/pdf.svg" alt="pdf"></span>
       <span class="reports">Sustainability Reports 2014<img src="/static/media/imgs/pdf.svg" alt="pdf"></span>
     </div>
-
   </footer>
   <!-- Footer end -->
+
+  <!-- Energy Modal start -->
+  <div class="modal" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog energy-modal" role="document">
+      <div class="modal-content energy-modal-content">
+        <div class="energy-modal-header">
+          <span>CHIUDI</span>
+          <button type="button" class="close-energy-modal" data-dismiss="modal" aria-label="Close">
+            <img src="/static/media/icons/close-white.svg" alt="close">
+          </button>
+        </div>
+        <div class="container-fluid body-energy-modal">
+          <div class="row">
+            <div class="col-10 offset-col-2 m-auto">
+              <img src="/static/media/imgs/modal-energy-img.jpg" alt="img">
+              <div class="col-12 text-center modal-energy-title-col">
+                <h1 class="modal-energy-title py-4">Energy</h1>
+              </div>
+              <div class="col-12 text-left modal-energy-text-section">
+                <h3 class="pb-3">Energy production</h3>
+                <p class="pt-3 pb-4">Suspendisse potenti. Sed pretium dignissim lectus fermentum facilisis. Sed euismod diam vulputate, tincidunt purus quis, maximus augue. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Aenean at nisl et odio ullamcorper convallis et et mi. Etiam feugiat leo tellus.</p>
+              </div>
+              <div class="row d-flex justify-content-between modal-energy-graph-section">
+                <div class="col-2">
+                  <p>Electricity produced</p>
+                </div>
+                <div class="separator"></div>
+                <div class="col-8">
+                  <img src="/static/media/imgs/modal-energy-graph1.svg" alt="graph">
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+          <button type="button" class="btn btn-primary">Save changes</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- Energy Modal end -->
 
 
 
@@ -552,7 +593,7 @@
 
       checkScreenSize();
 
-      function checkScreenSize(){
+      function checkScreenSize() {
         var newWindowWidth = $(window).width();
         if (newWindowWidth < 768) {
             $("a[href^=\\#]").click(function(e) {   
@@ -569,6 +610,15 @@
             $('html,body').animate({ scrollTop: $(dest).offset().top - 50}, 'fast'); });
         }
       }
+
+      $('#modalHandler').click(function() {
+        $('#exampleModal').modal({
+          show: true,
+          keyboard: true
+        })
+      })
+      
+      
     });
   </script>
  
