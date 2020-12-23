@@ -1494,11 +1494,25 @@ h3.energy-title {
           color: $bordeaux;
           line-height: 1.3;
         }
-        .img-cont {
+        %img-cont-placeholder {
           width: 100%;
           height: 350px;
           background: url('/static/media/imgs/modal-energy-graph1.svg') no-repeat center;
           background-size: contain;
+
+        }
+        .img-cont {
+          @extend %img-cont-placeholder;
+        }
+        .graph2 {
+          @extend .img-cont;
+          background: url('/static/media/imgs/modal-energy-graph2.svg') no-repeat center!important;
+          background-size: contain!important;
+        }
+        .graph3 {
+          @extend .img-cont;
+          background: url('/static/media/imgs/modal-energy-graph3.svg') no-repeat center!important;
+          background-size: contain!important;
         }
         // img {
         //   width: 100%;
@@ -1550,7 +1564,7 @@ h3.energy-title {
         }
         .modal-energy-graph-section {
           p {
-            
+            min-width: 250px;
             font-family: Teuton;
             font-size: 20px;
             line-height: 1.3;
