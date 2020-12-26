@@ -508,8 +508,6 @@ h3.energy-title {
   background: $white-two;
 }
 
-
-
 @media screen and (min-width: 768px) {
   .maps h3 {
     font-size: 100px;
@@ -744,9 +742,10 @@ h3.energy-title {
 
 /* ROME PAGE START */
 
+
 .rome-landing {
   height: 90vh;
-  background: url('/static/media/imgs/rome-landing.jpg') no-repeat center fixed;
+  background: url('/static/media/imgs/rome-landing.jpg') no-repeat center;
   background-size: cover;
   font-family: 'Teuton';
   color: $white-three;
@@ -757,8 +756,8 @@ h3.energy-title {
     font-size: 45px;
     line-height: 26px;
   }
-  
 }
+
 .scroll-animate-col {
   &:hover {
     #scroll-img {
@@ -873,7 +872,7 @@ h3.energy-title {
 }
 
 .power-plant {
-  background: url('/static/media/imgs/rome-landing.jpg') no-repeat center scroll;
+  background: url('/static/media/imgs/rome-landing.jpg') no-repeat center;
   background-size: cover;
   font-family: 'Teuton';
   color: $white-three;

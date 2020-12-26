@@ -13,7 +13,7 @@
 
 <body style="overflow-x: visible;">
   <div class="container-fluid">
-    <div class="row rome-landing">
+    <div class="row rome-landing parallax" id="rome-landing">
       <div class="col-sm-12 col-md-12 col-lg-12 py-3 px-3">
         <img src="/static/media/imgs/logo-white.svg" alt="logo">
 			</div>
@@ -29,7 +29,7 @@
   </div>
 	<!-- Navbar start -->
 	<nav id="nav-position" class="navbar navbar-expand-lg py-lg-2 py-md-3 py-sm-3 px-lg-1 px-md-1 px-sm-3 rome-navbar">
-		<a class="navbar-brand" href="#">
+		<a class="navbar-brand" href="#rome-landing">
 			<img src="/static/media/imgs/logo-white.svg" class="d-inline-block ml-sm-3" alt="logo">
 		</a>
 		<div class="navbar-text-rome mt-1"><span class="mr-2">|</span> ROME</div>
@@ -123,7 +123,7 @@
 	<!-- Rome Management end -->
 	<!-- Power Plant start -->
 	<div class="container-fluid">
-		<div class="row management power-plant d-lg-flex justify-content-center" id="p-plant">
+		<div class="row management power-plant parallax d-lg-flex justify-content-center" id="p-plant">
 			<div class="col-sm-12 col-md-12 col-lg-12 d-flex offset-lg-2 offset-md-1 align-items-start">
 				<h1 class="management-title mb-0 my-5 power-plant-title text-white">Our power plant</h1>
 			</div>
@@ -589,7 +589,15 @@
   <script src="assets/js/slider.js"></script>
   <script>
     $(document).ready(function(){
-      var clicked = false;
+
+      const parallax = document.querySelectorAll(".parallax");
+      window.addEventListener("scroll", function() {
+        let offset = window.pageYOffset;
+        parallax.forEach(function(prllx) {
+          prllx.style.backgroundPositionY = (offset - prllx.offsetTop) * 0.7 + "px";
+        })
+      });
+
       $("#scroll-img").click(function(event) {
         event.preventDefault()
         $("html,body").animate({
@@ -602,7 +610,6 @@
           $("html,body").animate({
             scrollTop: $("#nav-position").position().top },'fast');
       })
-      
 
       $(window).on("resize", function (e) {
         checkScreenSize();
@@ -613,18 +620,18 @@
       function checkScreenSize() {
         var newWindowWidth = $(window).width();
         if (newWindowWidth < 768) {
-            $("a[href^=\\#]").click(function(e) {   
+          $("a[href^=\\#]").click(function(e) {   
             e.preventDefault();   
-            var dest = $(this).attr('href');   
-            console.log(dest);   
-            $('html,body').animate({ scrollTop: $(dest).offset().top - 450 }, 'fast'); });
+            var dest = $(this).attr('href');
+            $('html,body').animate({ scrollTop: $(dest).offset().top - 450 }, 'fast'); 
+          });
         }
         else {
           $("a[href^=\\#]").click(function(e) {   
             e.preventDefault();   
-            var dest = $(this).attr('href');   
-            console.log(dest);   
-            $('html,body').animate({ scrollTop: $(dest).offset().top - 50}, 'fast'); });
+            var dest = $(this).attr('href');
+            $('html,body').animate({ scrollTop: $(dest).offset().top - 50}, 'fast'); 
+          });
         }
       }
 
@@ -634,8 +641,6 @@
           keyboard: true
         })
       })
-      
-      
     });
   </script>
  
