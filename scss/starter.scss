@@ -473,7 +473,6 @@ h3.energy-title {
   }
   .map-legenda {
     list-style: none;
-    // margin: 0;
     padding: 0;
     li {
       font-family: "Teuton";
@@ -527,6 +526,14 @@ h3.energy-title {
     background: transparent!important;
   }
 }
+@media screen and (max-width: 576px) {
+  .energy-stats {
+    .rome-stats-item {
+      margin-bottom: 1.5em;
+    }
+  }
+}
+
 
 .banner-span-high {
   font-family: "Teuton";
@@ -783,7 +790,6 @@ h3.energy-title {
   cursor: pointer;
   transition: animation;
   opacity: 1;
-  filter: drop-shadow(30px 10px 4px #4444dd);
 }
 @keyframes scroll {
   0% {
@@ -1142,6 +1148,13 @@ h3.energy-title {
       font-size: 45px;
       color: $white-three;
     }
+  }
+}
+
+@media screen and (max-width: 576px) {
+  .environmental {
+    padding: 1em;
+    margin-top: 1em;
   }
 }
 
